@@ -372,13 +372,46 @@
                         <div class="polaroid-img-wrapper">
                             <img src="photo3.jpeg" alt="Memory 3" onerror="this.onerror=null; this.src='photo3.jpg';">
                         </div>
-                        <p>Always & Forever ❤️</p>
+                        <p>Absolute Cuteness 😘</p>
                     </div>
-                    <button class="btn btn-next" onclick="nextSlide(4)">Read My Special Letter 💌</button>
+                    <button class="btn btn-next" onclick="nextSlide(4)">See Next Memory 💖</button>
                 </div>
 
-                <!-- STEP 4: EXPRESSIVE LOVE LETTER & "THE END" BUTTON -->
+                <!-- STEP 4: PHOTO 4 -->
                 <div id="slide-4" class="slide-step hidden">
+                    <div class="polaroid">
+                        <div class="polaroid-img-wrapper">
+                            <img src="photo4.jpeg" alt="Memory 4" onerror="this.onerror=null; this.src='photo4.jpg';">
+                        </div>
+                        <p>Pure Happiness 💖</p>
+                    </div>
+                    <button class="btn btn-next" onclick="nextSlide(5)">See Next Memory 💖</button>
+                </div>
+
+                <!-- STEP 5: PHOTO 5 -->
+                <div id="slide-5" class="slide-step hidden">
+                    <div class="polaroid">
+                        <div class="polaroid-img-wrapper">
+                            <img src="photo5.jpeg" alt="Memory 5" onerror="this.onerror=null; this.src='photo5.jpg';">
+                        </div>
+                        <p>Fun Infinite 🖕</p>
+                    </div>
+                    <button class="btn btn-next" onclick="nextSlide(6)">See Next Memory 💖</button>
+                </div>
+
+                <!-- STEP 6: PHOTO 6 -->
+                <div id="slide-6" class="slide-step hidden">
+                    <div class="polaroid">
+                        <div class="polaroid-img-wrapper">
+                            <img src="photo6.jpeg" alt="Memory 6" onerror="this.onerror=null; this.src='photo6.jpg';">
+                        </div>
+                        <p>Always & Forever ❤️</p>
+                    </div>
+                    <button class="btn btn-next" onclick="nextSlide(7)">Read My Special Letter 💌</button>
+                </div>
+
+                <!-- STEP 7: EXPRESSIVE LOVE LETTER & "THE END" BUTTON -->
+                <div id="slide-7" class="slide-step hidden">
                     <div class="letter-card">
                         <h3 style="font-family: 'Dancing Script', cursive; font-size: 1.8rem; color: var(--deep-rose); margin-bottom: 0.6rem; text-align: center;">My Dearest Bornomala, ❤️</h3>
                         
@@ -397,11 +430,11 @@
                     <div class="arrow-prompt">
                         👇 Please Click to End This 👇
                     </div>
-                    <button class="btn btn-end" onclick="nextSlide(5)">The End 💖</button>
+                    <button class="btn btn-end" onclick="nextSlide(8)">The End 💖</button>
                 </div>
 
-                <!-- STEP 5: FINAL ENDING & CALL SECTION -->
-                <div id="slide-5" class="slide-step hidden">
+                <!-- STEP 8: FINAL ENDING & CALL SECTION -->
+                <div id="slide-8" class="slide-step hidden">
                     <div class="letter-card" style="text-align: center; padding: 1.5rem 1rem;">
                         <h3 style="font-family: 'Dancing Script', cursive; font-size: 1.8rem; color: var(--deep-rose); margin-bottom: 0.8rem;">Thank You, Bornomala! 💕</h3>
                         
@@ -469,13 +502,23 @@
             "Ta-da! Click YES now! 🎉"
         ];
 
-        const funnyTexts = [
-            "Nice try! 😜",
-            "Wrong button! 🙈",
-            "Click YES instead! ❤️",
-            "Can't catch me! 🏃‍♀️",
-            "Oops, missed again! 😝",
-            "You know you want to click YES! 💕"
+            const funnyTexts = [
+        "Nice try! 😜",
+        "Wrong button! 🙈",
+        "Click YES instead! ❤️",
+        "Can't catch me! 🏃‍♀️",
+        "Oops, missed again! 😝",
+        "You know you want to click YES! 💕",
+        "Playing hard to get? 😉",
+        "Nope, not allowed! 🚫",
+        "Nice reflex, but no! ⚡",
+        "Stop playing around! 🙈",
+        "Error 404: 'No' not found! 404",
+        "Are you really trying to click No? 🥺",
+        "Too slow! 💨",
+        "Resistance is futile! 🤖",
+        "Just click YES already! 😂",
+        "Nice attempt, speedster! 🏎️"
         ];
 
         function handleNoInteraction(e) {
@@ -551,7 +594,7 @@
         }
 
         // 6. Countdown Logic (Target: August 20, 2026)
-        const targetDate = new Date("August 20, 2026 00:00:00").getTime();
+        const targetDate = new Date("August 20, 2025 00:00:00").getTime();
 
         function updateCountdown() {
             const now = new Date().getTime();
