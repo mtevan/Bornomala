@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Only for Bornomala! ❤️</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Happy Birthday Bornomala! ❤️</title>
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
             --deep-rose: #e63946;
             --gold-accent: #d4af37;
             --text-dark: #3a2e2d;
-            --glass-bg: rgba(255, 255, 255, 0.88);
+            --glass-bg: rgba(255, 255, 255, 0.92);
         }
 
         * {
@@ -25,18 +25,13 @@
             -webkit-tap-highlight-color: transparent;
         }
 
-        body {
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
             font-family: 'Poppins', sans-serif;
             background: linear-gradient(160deg, #ffe6eb 0%, #def3f8 100%);
             color: var(--text-dark);
-            min-height: 100vh;
-            min-height: -webkit-fill-available;
-            overflow-x: hidden;
-            position: relative;
-        }
-
-        html {
-            height: -webkit-fill-available;
         }
 
         /* Floating Background Particles */
@@ -54,18 +49,20 @@
             100% { transform: translateY(-10vh) scale(1.1) rotate(360deg); opacity: 0; }
         }
 
-        /* Screens */
+        /* Screens - Fitted for all mobile screens */
         .screen {
             min-height: 100vh;
-            min-height: -webkit-fill-available;
+            min-height: 100dvh;
+            width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 1.25rem;
+            padding: 1rem;
             position: relative;
             z-index: 1;
-            transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+            overflow-y: auto;
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
         }
 
         .hidden {
@@ -77,13 +74,14 @@
             background: var(--glass-bg);
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
-            border-radius: 28px;
-            padding: 2rem 1.25rem;
+            border-radius: 24px;
+            padding: 1.5rem 1.2rem;
             box-shadow: 0 10px 30px rgba(230, 57, 70, 0.12);
             border: 1px solid rgba(255, 255, 255, 0.8);
             text-align: center;
             width: 100%;
-            max-width: 450px;
+            max-width: 380px;
+            margin: auto 0;
         }
 
         /* Typography */
@@ -92,28 +90,28 @@
             letter-spacing: 2px;
             color: var(--gold-accent);
             font-weight: 600;
-            font-size: 0.8rem;
-            margin-bottom: 0.3rem;
+            font-size: 0.75rem;
+            margin-bottom: 0.2rem;
         }
 
         .special-title {
             font-family: 'Dancing Script', cursive;
             color: var(--deep-rose);
-            font-size: 3rem;
-            line-height: 1;
+            font-size: 2.5rem;
+            line-height: 1.1;
             margin: 0.2rem 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 6px;
         }
 
         .special-subtitle {
             color: #777;
             font-style: italic;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             margin-top: 0.2rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
         }
 
         /* Interactive Buttons */
@@ -122,15 +120,15 @@
             gap: 1rem;
             justify-content: center;
             align-items: center;
-            margin-top: 1.8rem;
+            margin-top: 1.5rem;
             position: relative;
             width: 100%;
-            min-height: 80px;
+            min-height: 70px;
         }
 
         .btn {
-            padding: 14px 24px;
-            font-size: 1.05rem;
+            padding: 12px 20px;
+            font-size: 1rem;
             border: none;
             border-radius: 50px;
             cursor: pointer;
@@ -143,17 +141,17 @@
         .btn-yes, .btn-next, .btn-end {
             background: linear-gradient(45deg, #ff758c, #ff7eb3);
             color: white;
-            width: 85%;
-            max-width: 280px;
+            width: 100%;
+            max-width: 260px;
             animation: pulse 2s infinite;
-            margin: 1.2rem auto 0 auto;
+            margin: 1rem auto 0 auto;
             display: block;
             text-decoration: none;
         }
 
         @keyframes pulse {
             0% { transform: scale(1); }
-            50% { transform: scale(1.04); }
+            50% { transform: scale(1.03); }
             100% { transform: scale(1); }
         }
 
@@ -163,35 +161,35 @@
             border: 2px solid var(--primary-pink);
             z-index: 10;
             transition: left 0.2s ease, top 0.2s ease;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
 
         /* Countdown Container */
         .countdown-container {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 0.5rem;
-            margin: 1.2rem 0;
+            gap: 0.4rem;
+            margin: 1rem 0;
             width: 100%;
         }
 
         .time-box {
             background: rgba(255, 255, 255, 0.9);
-            padding: 0.6rem 0.2rem;
-            border-radius: 14px;
+            padding: 0.5rem 0.2rem;
+            border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.04);
             text-align: center;
         }
 
         .time-box span {
             display: block;
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             font-weight: 700;
             color: var(--deep-rose);
         }
 
         .time-box label {
-            font-size: 0.65rem;
+            font-size: 0.6rem;
             color: #888;
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -203,60 +201,70 @@
             width: 100%;
         }
 
+        /* 1:1 POLAROID PHOTO FRAME FIX */
         .polaroid {
             background: white;
-            padding: 12px 12px 18px 12px;
+            padding: 10px 10px 14px 10px;
             border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(230, 57, 70, 0.12);
+            box-shadow: 0 8px 22px rgba(230, 57, 70, 0.12);
             transform: rotate(-1deg);
-            margin: 1rem 0;
+            margin: 0.8rem 0;
+            width: 100%;
+        }
+
+        .polaroid-img-wrapper {
+            width: 100%;
+            aspect-ratio: 1 / 1; /* Strictly 1:1 Aspect Ratio */
+            border-radius: 10px;
+            overflow: hidden;
+            background: #f7f7f7;
         }
 
         .polaroid img {
             width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 10px;
+            height: 100%;
+            object-fit: cover; /* Fits image into 1:1 perfectly */
+            display: block;
         }
 
         .polaroid p {
             font-family: 'Dancing Script', cursive;
-            font-size: 1.5rem;
-            margin-top: 10px;
+            font-size: 1.4rem;
+            margin-top: 8px;
             color: var(--deep-rose);
         }
 
         /* Expressive Letter Card */
         .letter-card {
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 228, 225, 0.6));
-            padding: 1.5rem 1.2rem;
-            border-radius: 20px;
-            margin-top: 1rem;
+            padding: 1.2rem 1rem;
+            border-radius: 18px;
+            margin-top: 0.8rem;
             text-align: left;
             border: 1px solid rgba(255, 183, 197, 0.5);
-            box-shadow: 0 8px 20px rgba(230, 57, 70, 0.08);
+            box-shadow: 0 6px 18px rgba(230, 57, 70, 0.08);
         }
 
         .letter-card p {
-            font-size: 0.92rem;
-            line-height: 1.7;
+            font-size: 0.88rem;
+            line-height: 1.6;
             color: #4a3b3a;
-            margin-bottom: 0.9rem;
+            margin-bottom: 0.8rem;
         }
 
         .arrow-prompt {
             color: var(--deep-rose);
             font-weight: 600;
-            font-size: 0.95rem;
-            margin-top: 1.5rem;
+            font-size: 0.88rem;
+            margin-top: 1.2rem;
             animation: bounce 1.5s infinite;
             text-align: center;
         }
 
         @keyframes bounce {
             0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-8px); }
-            60% { transform: translateY(-4px); }
+            40% { transform: translateY(-6px); }
+            60% { transform: translateY(-3px); }
         }
 
         .phone-link {
@@ -264,7 +272,7 @@
             font-weight: 700;
             text-decoration: underline;
             display: inline-block;
-            margin-top: 0.4rem;
+            margin-top: 0.3rem;
         }
     </style>
 </head>
@@ -282,10 +290,10 @@
     <!-- SCREEN 1: Interactive Question Screen -->
     <section id="intro-screen" class="screen">
         <div class="glass-card" id="intro-card">
-            <p style="font-size: 0.85rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold-accent); font-weight: 600; margin-bottom: 0.5rem;">For My Favorite Person</p>
-            <h1 style="font-family: 'Dancing Script', cursive; color: var(--deep-rose); font-size: 2.8rem;">Hey Bornomala! 💕</h1>
-            <p style="margin-top: 0.8rem; color: #555;">Tanvin made something very special just for you...</p>
-            <h2 style="font-family: 'Dancing Script', cursive; color: var(--deep-rose); font-size: 2.2rem; margin-top: 1.5rem;">Are you Excited?</h2>
+            <p style="font-size: 0.8rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold-accent); font-weight: 600; margin-bottom: 0.3rem;">For My Favorite Person</p>
+            <h1 style="font-family: 'Dancing Script', cursive; color: var(--deep-rose); font-size: 2.5rem;">Hey Bornomala! 💕</h1>
+            <p style="margin-top: 0.6rem; color: #555; font-size: 0.9rem;">Tanvin made something very special just for you...</p>
+            <h2 style="font-family: 'Dancing Script', cursive; color: var(--deep-rose); font-size: 2rem; margin-top: 1.2rem;">Are you Excited?</h2>
 
             <div class="btn-group" id="btn-group">
                 <button class="btn btn-yes hidden" id="yes-btn" style="margin: 0;" onclick="startCelebration()">YES! 🎉</button>
@@ -303,7 +311,7 @@
                 <p class="pre-header">Celebrating Something</p>
                 <div class="special-title">
                     <span>VERY SPECIAL</span>
-                    <span style="font-size: 2rem;">✨</span>
+                    <span style="font-size: 1.8rem;">✨</span>
                 </div>
                 <p class="special-subtitle">August 20, 2006</p>
             </div>
@@ -313,7 +321,7 @@
                 <p class="pre-header">Celebrating 20 Magical Years</p>
                 <div class="special-title">
                     <span>Happy Birthday!</span>
-                    <span style="font-size: 2rem;">🎂</span>
+                    <span style="font-size: 1.8rem;">🎂</span>
                 </div>
                 <p class="special-subtitle">Bornomala • August 20, 2006</p>
             </div>
@@ -327,9 +335,9 @@
             </div>
 
             <!-- Lock Notice (Before Countdown Ends) -->
-            <div id="pre-birthday-msg" style="background: rgba(255,255,255,0.7); padding: 1.2rem; border-radius: 18px; margin-top: 1rem; border: 1px solid rgba(255,255,255,0.9);">
-                <p style="color: var(--deep-rose); font-weight: 600; font-size: 1.05rem;">⏳ The grand surprise is locked!</p>
-                <p style="margin-top: 0.5rem; color: #555; font-size: 0.85rem;">Come back on August 20th when the countdown hits zero to unlock something special from Tanvin! ❤️</p>
+            <div id="pre-birthday-msg" style="background: rgba(255,255,255,0.7); padding: 1rem; border-radius: 16px; margin-top: 0.8rem; border: 1px solid rgba(255,255,255,0.9);">
+                <p style="color: var(--deep-rose); font-weight: 600; font-size: 0.95rem;">⏳ The grand surprise is locked!</p>
+                <p style="margin-top: 0.4rem; color: #555; font-size: 0.8rem;">Come back on August 20th when the countdown hits zero to unlock something special from Tanvin! ❤️</p>
             </div>
 
             <!-- Interactive Main Wish Flow (Unlocked After Countdown) -->
@@ -338,7 +346,9 @@
                 <!-- STEP 1: PHOTO 1 -->
                 <div id="slide-1" class="slide-step">
                     <div class="polaroid">
-                        <img src="photo1.jpeg" alt="Memory 1">
+                        <div class="polaroid-img-wrapper">
+                            <img src="photo1.jpeg" alt="Memory 1" onerror="this.onerror=null; this.src='photo1.jpg';">
+                        </div>
                         <p>Your Beautiful Smile ✨</p>
                     </div>
                     <button class="btn btn-next" onclick="nextSlide(2)">See Next Memory 💖</button>
@@ -347,7 +357,9 @@
                 <!-- STEP 2: PHOTO 2 -->
                 <div id="slide-2" class="slide-step hidden">
                     <div class="polaroid">
-                        <img src="photo2.jpeg" alt="Memory 2">
+                        <div class="polaroid-img-wrapper">
+                            <img src="photo2.jpeg" alt="Memory 2" onerror="this.onerror=null; this.src='photo2.jpg';">
+                        </div>
                         <p>Our Favorite Moments 🌸</p>
                     </div>
                     <button class="btn btn-next" onclick="nextSlide(3)">See Next Memory 💖</button>
@@ -356,7 +368,9 @@
                 <!-- STEP 3: PHOTO 3 -->
                 <div id="slide-3" class="slide-step hidden">
                     <div class="polaroid">
-                        <img src="photo3.jpeg" alt="Memory 3">
+                        <div class="polaroid-img-wrapper">
+                            <img src="photo3.jpeg" alt="Memory 3" onerror="this.onerror=null; this.src='photo3.jpg';">
+                        </div>
                         <p>Always & Forever ❤️</p>
                     </div>
                     <button class="btn btn-next" onclick="nextSlide(4)">Read My Special Letter 💌</button>
@@ -365,7 +379,7 @@
                 <!-- STEP 4: EXPRESSIVE LOVE LETTER & "THE END" BUTTON -->
                 <div id="slide-4" class="slide-step hidden">
                     <div class="letter-card">
-                        <h3 style="font-family: 'Dancing Script', cursive; font-size: 2.2rem; color: var(--deep-rose); margin-bottom: 0.8rem; text-align: center;">My Dearest Bornomala, ❤️</h3>
+                        <h3 style="font-family: 'Dancing Script', cursive; font-size: 1.8rem; color: var(--deep-rose); margin-bottom: 0.6rem; text-align: center;">My Dearest Bornomala, ❤️</h3>
                         
                         <p>From the moment you entered my world, everything became infinitely warmer, softer and more meaningful. You possess a rare, effortless magic—a warmth in your laughter and a quiet beauty in your soul that lights up even my darkest days.</p>
                         
@@ -373,9 +387,9 @@
                         
                         <p>May this new chapter bring you endless laughter, glowing success and all the boundless happiness your beautiful heart so truly deserves. No matter where life takes us, I promise to cherish, support and love you through every season.</p>
                         
-                        <p style="margin-top: 1.5rem; text-align: right; font-weight: 600; color: var(--deep-rose); font-size: 1.05rem; font-family: 'Dancing Script', cursive;">
+                        <p style="margin-top: 1.2rem; text-align: right; font-weight: 600; color: var(--deep-rose); font-size: 0.98rem; font-family: 'Dancing Script', cursive;">
                             Forever & Always Yours,<br>
-                            <span style="font-size: 1.8rem;">Tanvin 💕</span>
+                            <span style="font-size: 1.6rem;">Tanvin 💕</span>
                         </p>
                     </div>
 
@@ -387,17 +401,17 @@
 
                 <!-- STEP 5: FINAL ENDING & CALL SECTION -->
                 <div id="slide-5" class="slide-step hidden">
-                    <div class="letter-card" style="text-align: center; padding: 1.8rem 1.2rem;">
-                        <h3 style="font-family: 'Dancing Script', cursive; font-size: 2rem; color: var(--deep-rose); margin-bottom: 1rem;">Thank You, Bornomala! 💕</h3>
+                    <div class="letter-card" style="text-align: center; padding: 1.5rem 1rem;">
+                        <h3 style="font-family: 'Dancing Script', cursive; font-size: 1.8rem; color: var(--deep-rose); margin-bottom: 0.8rem;">Thank You, Bornomala! 💕</h3>
                         
-                        <p style="font-size: 0.98rem; font-weight: 500;">
+                        <p style="font-size: 0.92rem; font-weight: 500;">
                             If you liked that.. Please Message me Now on Messenger.
                         </p>
                         
-                        <p style="font-size: 0.92rem; margin-top: 1.2rem;">
+                        <p style="font-size: 0.88rem; margin-top: 1rem;">
                             call me on my number : <br>
                             <a href="tel:+8801320611866" class="phone-link">+8801320-611866</a><br>
-                            <span style="font-size: 0.78rem; color: #777;">(Tap on the Number to Call Now)</span>
+                            <span style="font-size: 0.75rem; color: #777;">(Tap on the Number to Call Now)</span>
                         </p>
                     </div>
                 </div>
@@ -480,8 +494,8 @@
             }
 
             const padding = 20;
-            const btnWidth = noBtn.offsetWidth || 100;
-            const btnHeight = noBtn.offsetHeight || 40;
+            const btnWidth = noBtn.offsetWidth || 90;
+            const btnHeight = noBtn.offsetHeight || 38;
 
             const maxX = window.innerWidth - btnWidth - padding;
             const maxY = window.innerHeight - btnHeight - padding;
@@ -512,7 +526,7 @@
                 intro.classList.add('hidden');
                 main.classList.remove('hidden');
                 window.scrollTo(0, 0);
-            }, 600);
+            }, 500);
         }
 
         // 5. Sequential Slide Navigation
@@ -559,7 +573,7 @@
                 const countdownArea = document.getElementById('countdown-area');
                 countdownArea.className = "";
                 countdownArea.innerHTML = `
-                    <div style="width: 100%; text-align: center; padding: 14px; background: rgba(255, 183, 197, 0.3); border-radius: 16px; color: var(--deep-rose); font-weight: 600; font-size: 1.05rem; border: 1px solid var(--primary-pink); margin: 1rem 0;">
+                    <div style="width: 100%; text-align: center; padding: 12px; background: rgba(255, 183, 197, 0.3); border-radius: 14px; color: var(--deep-rose); font-weight: 600; font-size: 0.95rem; border: 1px solid var(--primary-pink); margin: 0.8rem 0;">
                         🎂 IT'S YOUR SPECIAL DAY! HAPPY 20TH BIRTHDAY BORNOMALA! 🎉✨
                     </div>
                 `;
